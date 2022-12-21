@@ -30,10 +30,10 @@ def sum_to_n?(arr, number)
   arr.each { |i|
   val = number-i
   count = 0
-  puts
-  puts "#{number} - #{i} = #{val}"
-  puts arr.include? val
-  puts 
+  # puts
+  # puts "#{number} - #{i} = #{val}"
+  # puts arr.include? val
+  # puts 
   if arr.include? val
     if val != i
       return true
@@ -73,15 +73,28 @@ end
 
 def binary_multiple_of_4?(string)
   # YOUR CODE HERE
-  # puts string
+  # puts
+  # puts "String is #{string}"
   # puts string.to_i(2)
   # puts string.to_i(2) % 4
   # puts
+  if string == ""
+    return false
+  end
+  vals = string.split('')
+  vals.each { |i|
+
+  if i != '1' && i != '0'
+    # puts "THis string is not binary"
+    return false
+  end
+
+  }
   if string.to_i(2) % 4 == 0
     return true
   end
   return false
-
+# puts
 
 end
 
